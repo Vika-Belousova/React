@@ -12,9 +12,10 @@ const __dirname = path.dirname(__filename);
 const PORT = process.env.PORT || 5000;
 const app = express();
 app.use(cors());
+app.use(express.json());
 app.use('/static', express.static(path.resolve(__dirname, 'static')));
 app.use('/', router)
-app.use(express.json());
+
 app.use(errorMiddleware);
 const start = async () => {
 try{
