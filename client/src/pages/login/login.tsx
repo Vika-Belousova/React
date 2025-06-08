@@ -1,3 +1,4 @@
+import { Logo } from "../../components/logo/logo";
 function Login(){
   return(
     <div className="page page--gray page--login">
